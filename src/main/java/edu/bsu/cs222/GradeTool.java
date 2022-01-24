@@ -23,7 +23,7 @@ public class GradeTool {
 
         assert list != null;
 
-        Convert policy = new Convert();
+        Converter policy = new Converter();
         for (float number : list) {
             System.out.println(policy.toGrade(number));
         }

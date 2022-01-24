@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * Parses a stream of grades.
- *
  * Each line of the stream is expected to be a single numeric value
  * in the range [0,1].
  */

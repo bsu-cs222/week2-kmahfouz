@@ -1,6 +1,6 @@
 package edu.bsu.cs222;
 
-public class Convert {
+public class Converter {
     public edu.bsu.cs222.Grade toGrade(float percent) {
         if (percent > 8f/9f) {
             return edu.bsu.cs222.Grade.A;
