@@ -26,17 +26,17 @@ public class GradeFile {
         if (inputStream == null) {
             throw new IllegalArgumentException("Input stream must not be null.");
         }
-        List<Float> result = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        List<Float> gradeFile = new ArrayList<>();
+        BufferedReader gradeFileReader = new BufferedReader(new InputStreamReader(inputStream));
         String line;
-        while ((line = reader.readLine()) != null) {
+        while ((line = gradeFileReader.readLine()) != null) {
             try {
                 float f = Float.parseFloat(line);
-                result.add(f);
+                gradeFile.add(f);
             } catch (NumberFormatException numberFormatException) {
                 throw new ParseException();
             }
         }
-        return result;
+        return gradeFile;
     }
 }
