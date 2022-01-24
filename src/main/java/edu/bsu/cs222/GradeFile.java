@@ -17,26 +17,23 @@ public class GradeFile {
 
     /**
      * Parse the input stream into a list of floats.
-     * @param inputStream the input stream
      * @return the list of floats resulting from parsing the input stream
-     * @throws IOException if there is a problem reading from the stream
-     * @throws ParseException if the stream does not contain a format recognized by this parser
      */
     public List<Float> parse(InputStream inputStream) throws IOException {
         if (inputStream == null) {
             throw new IllegalArgumentException("Input stream must not be null.");
         }
-        List<Float> gradeFile = new ArrayList<>();
-        BufferedReader gradeFileReader = new BufferedReader(new InputStreamReader(inputStream));
-        String line;
-        while ((line = gradeFileReader.readLine()) != null) {
+        List<Float> gradeFloatList = new ArrayList<>();
+        BufferedReader gradeFloatListReader = new BufferedReader(new InputStreamReader(inputStream));
+        String listLine;
+        while ((listLine = gradeFloatListReader.readLine()) != null) {
             try {
-                float f = Float.parseFloat(line);
-                gradeFile.add(f);
+                float gradeFloat = Float.parseFloat(listLine);
+                gradeFloatList.add(gradeFloat);
             } catch (NumberFormatException numberFormatException) {
                 throw new ParseException();
             }
         }
-        return gradeFile;
+        return gradeFloatList;
     }
 }
