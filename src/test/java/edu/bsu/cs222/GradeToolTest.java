@@ -26,7 +26,7 @@ public class GradeToolTest {
     }
 
     @Test
-    public void Atest() {
+    public void AGradetest() {
         final PrintStream originalOut = System.out;
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
