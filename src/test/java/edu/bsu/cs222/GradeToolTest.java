@@ -12,7 +12,7 @@ import java.io.PrintStream;
 public class GradeToolTest {
 
     @Test
-    public void testMain1() {
+    public void nullTest() {
         final PrintStream originalOut = System.out;
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -26,7 +26,7 @@ public class GradeToolTest {
     }
 
     @Test
-    public void testMain2() {
+    public void Atest() {
         final PrintStream originalOut = System.out;
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
