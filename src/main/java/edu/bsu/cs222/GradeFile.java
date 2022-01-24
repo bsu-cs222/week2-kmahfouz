@@ -17,17 +17,17 @@ public class GradeFile {
 
     /**
      * Parse the input stream into a list of floats.
-     * @param input the input stream
+     * @param inputStream the input stream
      * @return the list of floats resulting from parsing the input stream
      * @throws IOException if there is a problem reading from the stream
      * @throws ParseException if the stream does not contain a format recognized by this parser
      */
-    public List<Float> parse(InputStream input) throws IOException {
-        if (input == null) {
+    public List<Float> parse(InputStream inputStream) throws IOException {
+        if (inputStream == null) {
             throw new IllegalArgumentException("Input stream must not be null.");
         }
         List<Float> result = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         String line;
         while ((line = reader.readLine()) != null) {
             try {
